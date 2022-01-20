@@ -1,0 +1,42 @@
+.newContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    margin: 0.5rem;
+    text-align: left;
+}
+
+.newContent label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.newContent input {
+    font: inherit;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #3a3232;
+    width: 22rem;
+    max-width: 100%;
+    outline: none;
+    margin-bottom: 2rem;
+    background: #f8f7f1;
+}
+
+.button {
+    background: #5f9341;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #5f9341;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.newContent.invalid input {
+    background: #f1cece;
+}
+
+.newContent.invalid label {
+    color: #e73d3d;
+}
