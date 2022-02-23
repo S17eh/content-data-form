@@ -1,0 +1,52 @@
+.newContent {
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    /*margin: 5% auto;*/
+    padding: 2%;
+    width: available;
+    margin-top: 8rem;
+}
+
+.newContent label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: auto;
+}
+
+.newContent input {
+    border-radius: 6px;
+    border: 1px solid #3a3232;
+    margin-bottom: 2rem;
+    background: #f8f7f1;
+    display: block;
+    width: 100%;
+    font: inherit;
+    line-height: 1.5rem;
+    padding: 0.25rem 0.25rem;
+}
+
+.newContent Button {
+    /*background: #5f9341;*/
+    /*color: white;*/
+    /*padding: 10px 20px;*/
+    /*border: 1px solid #5f9341;*/
+    /*font-weight: bold;*/
+    /*border-radius: 5px;*/
+    width: 100%;
+
+}
+
+.newContent.invalid input {
+    background: #f1cece;
+}
+
+.newContent.invalid label {
+    color: #e73d3d;
+}
+
+@media (min-width: 768px){
+    .newContent Button {
+        width: auto;
+    }
+}
