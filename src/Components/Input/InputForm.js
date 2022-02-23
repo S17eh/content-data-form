@@ -17,7 +17,7 @@ function InputForm(props) {
     const [error, setError] = useState();
     const [formIsValid, setFormIsValid] = useState(false);
 
-    const authCtx = useContext(AuthContext.Consumer)
+    const authCtx = useContext(AuthContext)
 
     useEffect(() => {
         const identifier = setTimeout(() => {

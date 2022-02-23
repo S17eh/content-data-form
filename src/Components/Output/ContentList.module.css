@@ -1,0 +1,25 @@
+.content {
+    width: available;
+    /*max-width: 40rem;*/
+}
+
+.content ul {
+    list-style: none;
+    padding: 0.5rem 1rem;
+}
+
+.content li {
+    border: 1px solid #ccc;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+.content Button{
+    width: 100%;
+}
+
+@media (min-width: 768px){
+    .content Button {
+        width: auto;
+    }
+}

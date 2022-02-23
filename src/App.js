@@ -11,19 +11,6 @@ import AuthContext from "./store/auth-context"
 function App() {
 
     const [contentList, SetContentList] = useState([])
-    // const [isLoggedIn, setIsLoggedIn] = useState(false);
-    //
-    // useEffect(() => {
-    //     if (localStorage.getItem("loggedIn") === "1") {
-    //         setIsLoggedIn(true)
-    //     } else {
-    //         setIsLoggedIn(false);
-    //     }
-    //     console.log("checking login")
-    //
-    //     return () => {
-    //     }
-    // }, [])
 
     useEffect(() => {
         if (localStorage.getItem("content") != null) {
@@ -40,19 +27,6 @@ function App() {
         }
     }, [])
 
-
-    // const loginHandler = (email, password) => {
-    //     // We should of course check email and password
-    //     // But it's just a dummy/ demo anyways
-    //     setIsLoggedIn(true);
-    //     localStorage.setItem("loggedIn", 1);
-    // };
-    //
-    // const logoutHandler = () => {
-    //     setIsLoggedIn(false);
-    //     localStorage.setItem("loggedIn", 0);
-    // };
-
     const ListHandler = (cName, uName) => {
         SetContentList((preState) => {
             return [...preState, {name: uName, nameOfCon: cName, id: Math.random().toString()}]
@@ -67,17 +41,9 @@ function App() {
 
     return (<ChakraProvider>
         <>
-            {/*<AuthContext.Provider */}
-            {/*     value={{*/}
-            {/*    isLoggedIn: isLoggedIn,*/}
-            {/*    onLogout: logoutHandler,*/}
-            {/*    onLogin: loginHandler*/}
-            {/*}}*/}
-            {/*>*/}
             <MainHeader/>
             {<InputForm ContentListHandler={ListHandler}/>}
             {ctx.isLoggedIn && <ContentList contents={contentList} onDelete={listWipe}/>}
-            {/*// </AuthContext.Provider>*/}
         </>
     </ChakraProvider>)
 
